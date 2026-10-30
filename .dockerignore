@@ -1,0 +1,13 @@
+.dart_tool/
+.git/
+.github/
+.idea/
+.vscode/
+build/
+android/
+ios/
+windows/
+linux/
+macos/
+*.png
+!Aset/*.png
