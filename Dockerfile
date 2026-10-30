@@ -1,5 +1,5 @@
 # Stage 1: Build Flutter Web
-FROM ghcr.io/cirruslabs/flutter:3.19.6 AS build-env
+FROM ghcr.io/cirruslabs/flutter:3.29.0 AS build-env
 
 WORKDIR /app
 
@@ -25,4 +25,5 @@ COPY --from=build-env /app/build/web /usr/share/nginx/html
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
+
 
