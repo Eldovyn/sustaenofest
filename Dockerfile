@@ -10,8 +10,8 @@ RUN flutter pub get
 # Copy the rest of the project files
 COPY . .
 
-# Build Flutter Web in release mode
-RUN flutter build web --release
+# Build Flutter Web in release mode without wasm dry-run issues
+RUN flutter config --no-wasm && flutter build web --release --no-wasm-dry-run
 
 # Stage 2: Production Nginx Server
 FROM nginx:alpine
@@ -25,6 +25,7 @@ COPY --from=build-env /app/build/web /usr/share/nginx/html
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
+
 
 
 
