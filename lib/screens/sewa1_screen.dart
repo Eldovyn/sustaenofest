@@ -487,7 +487,7 @@ class _Sewa1ScreenState extends State<Sewa1Screen> {
                             _usePoints = val;
                           });
                         },
-                        activeThumbColor: AppColors.primaryOrange,
+                        activeColor: AppColors.primaryOrange,
                       ),
                     ],
                   ),

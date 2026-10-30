@@ -217,7 +217,7 @@ class _AddressSettingsScreenState extends State<AddressSettingsScreen> {
                     title: const Text('Jadikan Alamat Utama',
                         style: TextStyle(
                             fontSize: 13.5, fontWeight: FontWeight.w600)),
-                    activeThumbColor: AppColors.primaryGreen,
+                    activeColor: AppColors.primaryGreen,
                     onChanged: (val) {
                       setSheetState(() => setPrimary = val);
                     },

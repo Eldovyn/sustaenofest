@@ -303,7 +303,7 @@ class _NotificationSettingsScreenState
         ),
       ),
       value: value,
-      activeThumbColor: AppColors.primaryGreen,
+      activeColor: AppColors.primaryGreen,
       activeTrackColor: AppColors.primaryGreen.withValues(alpha: 0.25),
       onChanged: onChanged,
     );
