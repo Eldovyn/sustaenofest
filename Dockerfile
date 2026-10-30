@@ -15,8 +15,8 @@ RUN flutter pub get
 # Copy the rest of the project files
 COPY . .
 
-# Build Flutter Web
-RUN flutter build web --release --no-tree-shake-icons
+# Build Flutter Web with verbose output so exact compilation error is shown in logs
+RUN flutter build web --release --no-tree-shake-icons -v
 
 # Stage 2: Production Nginx Server
 FROM nginx:alpine
@@ -30,6 +30,7 @@ COPY --from=build-env /app/build/web /usr/share/nginx/html
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
+
 
 
 
